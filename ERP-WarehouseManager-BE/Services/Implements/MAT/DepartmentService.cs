@@ -21,7 +21,7 @@ namespace ERP_WarehouseManager_BE.Services.Implements
                 var parameters = new DynamicParameters(req);
                 parameters.Add("CreateStaffID", StaffID);
                 using (var connection = GetConnection()) {
-                    var result = await connection.ExecuteAsync("MAT.Department_Create", parameters, commandType: System.Data.CommandType.StoredProcedure);
+                    var result = await connection.ExecuteScalarAsync<int>("MAT.Department_Create", parameters, commandType: System.Data.CommandType.StoredProcedure);
 
                     if (result > 0)
                     {
