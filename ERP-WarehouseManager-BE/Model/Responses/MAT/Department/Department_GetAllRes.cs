@@ -6,6 +6,9 @@
         public string? DepartmentCode { get; set; }
         public string? DepartmentName { get; set; }
         public string? Description { get; set; }
+        public int? StaffCreateID { get; set; }
+        public string? StaffCreateName { get; set; }
+        public DateTime? CreateDate { get; set; }
         public int? StatusID { get; set; }
         public string? StatusName { get; set; }
     }

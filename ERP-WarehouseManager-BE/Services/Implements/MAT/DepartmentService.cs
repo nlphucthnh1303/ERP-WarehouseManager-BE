@@ -108,10 +108,6 @@ namespace ERP_WarehouseManager_BE.Services.Implements
                     connection.Open();
                     string ProcedureName = "EXEC MAT.Department_GetByID @Id";
                     var result = await connection.QueryFirstOrDefaultAsync<Department_GetByIDRes>(ProcedureName, new { Id = ID });
-                    if (result == null)
-                    {
-                        result = new Department_GetByIDRes();
-                    }
                     return result;
                 };
             }
